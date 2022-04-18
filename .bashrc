@@ -234,3 +234,6 @@ alias krsss='kubectl rollout status statefulset'
 alias kru='kubectl rollout undo'
 alias ksd='kubectl scale deployment'
 alias ksss='kubectl scale statefulset'
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'

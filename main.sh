@@ -5,7 +5,7 @@ sudo apt-get update -y
 
 # prereqs
 sudo apt install git wget curl unzip snapd -y
-sudo apt-get install jq -y
+sudo apt-get install jq xclip -y
 
 # install Terraform v1.1.8
 TER_VER=1.1.8
