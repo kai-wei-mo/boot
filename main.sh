@@ -4,8 +4,14 @@ sudo apt upgrade -y
 sudo apt-get update -y
 
 # prereqs
-sudo apt install git wget curl unzip snapd -y
+sudo apt install git wget curl unzip snapd software-properties-common apt-transport-https -y
 sudo apt-get install jq xclip -y
+
+# install vscode
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code
 
 # install Terraform v1.1.8
 TER_VER=1.1.8
@@ -39,8 +45,6 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 sudo apt-get purge firefox
 
-# install p3x-onenote
-sudo snap install p3x-onenote
 
 # install waterloo vpn
 xdg-open https://uwaterloo.ca/mechanical-mechatronics-engineering-information-technology/virtual-private-network-vpn#install-ubuntu-vpn
