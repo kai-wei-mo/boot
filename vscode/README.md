@@ -1,6 +1,7 @@
 # vscode
+- for machines on which you can't log into with your personal account for Settings Sync
+
 - user preferences (`settings.json`)
-  - may require merge with vscode settings sync
 - installation of extensions
 
 ## vscode settings
@@ -9,6 +10,7 @@ cp settings.json ~/.config/Code/User
 ```
 
 ## vscode extensions
+- Code Runner
 - Docker
 - GitHub Copilot
 - GitLens
