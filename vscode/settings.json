@@ -1,27 +1,33 @@
 {
-    "workbench.colorTheme": "Default Dark+",
-    "window.zoomLevel": -1,
-    "editor.renderWhitespace": "all",
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.copyWithSyntaxHighlighting": false,
-    "editor.formatOnSave": true,
-    "diffEditor.codeLens": true,
-    "editor.suggest.preview": true,
-    "files.autoGuessEncoding": true,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "window.title": "${dirty}${activeEditorShort}${separator}${rootPath}${separator}${remoteName}",
-    "editor.rulers": [
-        80
-    ],
-    "editor.tabSize": 2,
-    "editor.tabCompletion": "on",
-    "editor.stickyTabStops": true,
-    "editor.inlineSuggest.enabled": true,
-    "github.copilot.enable": {
-        "*": true
-    },
-    "files.trimFinalNewlines": true
+  "workbench.colorTheme": "Default Dark+",
+  "editor.renderWhitespace": "all",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.formatOnSave": true,
+  "diffEditor.codeLens": true,
+  "editor.suggest.preview": true,
+  "files.autoGuessEncoding": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootPath}${separator}${remoteName}",
+  "editor.rulers": [
+    80
+  ],
+  "editor.tabSize": 2,
+  "editor.tabCompletion": "on",
+  "editor.stickyTabStops": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true
+  },
+  "files.trimFinalNewlines": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, PointerAlignment: Right, IndentWidth: 2, ColumnLimit: 80, AlignTrailingComments: true, AllowShortFunctionsOnASingleLine: Empty, BinPackArguments: false, BinPackParameters: false, AllowShortIfStatementsOnASingleLine: false }",
+  "[cpp]": {
+    "editor.wordBasedSuggestions": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true
+  },
 }
