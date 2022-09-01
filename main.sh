@@ -36,6 +36,10 @@ rm kubectl
 # install helm3
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
+# install nodejs and npm
+sudo apt install nodejs
+sudo apt install npm
+
 # .bashrc
 cp .bashrc ~/.bashrc
 
@@ -44,7 +48,6 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 sudo apt-get purge firefox
-
 
 # install waterloo vpn
 xdg-open https://uwaterloo.ca/mechanical-mechatronics-engineering-information-technology/virtual-private-network-vpn#install-ubuntu-vpn
