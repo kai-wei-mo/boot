@@ -13,8 +13,8 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install code
 
-# install Terraform v1.1.8
-TER_VER=1.1.8
+# install Terraform v1.2.8
+TER_VER=1.2.8
 wget https://releases.hashicorp.com/terraform/${TER_VER}/terraform_${TER_VER}_linux_amd64.zip
 unzip terraform_${TER_VER}_linux_amd64.zip
 rm terraform_${TER_VER}_linux_amd64.zip
