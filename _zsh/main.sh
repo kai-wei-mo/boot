@@ -6,6 +6,7 @@ chsh -s /bin/zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+brew upgrade
 
 # iterm2
 brew install --cask iterm2
@@ -17,7 +18,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-sed -i '' 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
+sed -i '' 's/plugins=(git.*/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
 
 # power level 10k
 cd ~
