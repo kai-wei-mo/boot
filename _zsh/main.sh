@@ -8,8 +8,9 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew upgrade
 
-# tree
+# handy stuff
 brew install tree
+brew install watch
 
 # iterm2
 brew install --cask iterm2
