@@ -36,9 +36,10 @@ rm kubectl
 # install helm3
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-# install nodejs and npm
+# install nodejs, npm, and volta
 sudo apt install nodejs
 sudo apt install npm
+curl https://get.volta.sh | bash
 
 # .bashrc
 cp .bashrc ~/.bashrc
