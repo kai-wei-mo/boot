@@ -6,7 +6,7 @@ alias kdelf='kubectl delete -f'
 
 # config
 alias kccc='kubectl config current-context'
-alias kcdc='kubectl config delete-context'
+alias kcdelc='kubectl config delete-context'
 alias kcgc='kubectl config get-contexts'
 alias kcn='kubectl config set-context --current --namespace'
 alias kcsc='kubectl config set-context'
