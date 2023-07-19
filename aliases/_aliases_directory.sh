@@ -40,7 +40,7 @@ fi
 
 shell_files=("$HOME/.zshrc" "$HOME/.bashrc")
 # add aliases to shellfiles
-echo "📝 Adding 'source ~/.aliases' to shell files"
+echo "📝 Adding alias sourcing loop to shell files"
 for config_file in "${shell_files[@]}"; do
     # Check if the file exists
     if [[ ! -f "$config_file" ]]; then
@@ -48,12 +48,16 @@ for config_file in "${shell_files[@]}"; do
         continue
     fi
 
-    # Append "source ~/.aliases" to the end of the file if it isnt already in there somewhere
-    if ! grep -q "source ~/.aliases" "$config_file"; then
+    # Append the alias sourcing loop to the end of the file if it isn't already in there somewhere
+    if ! grep -q "for alias_file in ~/.aliases/*; do" "$config_file"; then
         printf "\n\n" >> "$config_file"
-        echo "source ~/.aliases" >> "$config_file"
-        echo "  ✅ Appended: 'source ~/.aliases' to $config_file"
+        echo "# Source all alias files in the ~/.aliases directory" >> "$config_file"
+        echo "for alias_file in ~/.aliases/*; do" >> "$config_file"
+        echo "    source \"\$alias_file\"" >> "$config_file"
+        echo "done" >> "$config_file"
+        echo "  ✅ Appended: Alias sourcing loop to $config_file"
     else
-        echo "  ✅ Found: 'source ~/.aliases' in $config_file"
+        echo "  ✅ Found: Alias sourcing loop in $config_file"
     fi
 done
+
