@@ -56,6 +56,7 @@ for config_file in "${shell_files[@]}"; do
         echo "    source \"\$alias_file\"" >> "$config_file"
         echo "done" >> "$config_file"
         echo "  ✅ Appended: Alias sourcing loop to $config_file"
+        source $config_file
     else
         echo "  ✅ Found: Alias sourcing loop in $config_file"
     fi
