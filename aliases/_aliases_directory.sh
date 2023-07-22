@@ -62,3 +62,5 @@ for config_file in "${shell_files[@]}"; do
     fi
 done
 
+echo ""
+echo "📝 Please source your shell config file(s) to start using the aliases."
