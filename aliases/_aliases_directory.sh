@@ -49,7 +49,7 @@ for config_file in "${shell_files[@]}"; do
     fi
 
     # Append the alias sourcing loop to the end of the file if it isn't already in there somewhere
-    if ! grep -q "for alias_file in ~/.aliases/*; do" "$config_file"; then
+    if ! grep -q "Source all alias files in the ~/.aliases directory" "$config_file"; then
         printf "\n\n" >> "$config_file"
         echo "# Source all alias files in the ~/.aliases directory" >> "$config_file"
         echo "for alias_file in ~/.aliases/*; do" >> "$config_file"
