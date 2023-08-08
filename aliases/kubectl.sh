@@ -43,6 +43,12 @@ alias kecm='kubectl edit configmap'
 alias kgcm='kubectl get configmaps'
 alias kgcma='kubectl get configmaps --all-namespaces'
 
+# clusterrole
+alias kdcr='kubectl describe clusterrole'
+alias kdelcr='kubectl delete clusterrole'
+alias kecr='kubectl edit clusterrole'
+alias kgcr='kubectl get clusterrole'
+
 # crd
 alias kdcrd='kubectl describe crd'
 alias kdelcrd='kubectl delete crd'
