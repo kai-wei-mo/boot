@@ -22,3 +22,6 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.BezelServices kDim -bool true
 # Turn off keyboard illumination when computer is not used for 5 minutes
 defaults write com.apple.BezelServices kDimTime -int 300
+
+# Delete the user dictionary
+defaults delete -g NSUserDictionaryReplacementItems

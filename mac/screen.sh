@@ -44,3 +44,6 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
+
+# Click wallpaper to reveal desktop: only in stage manager
+/usr/bin/defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
