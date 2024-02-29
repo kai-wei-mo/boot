@@ -27,7 +27,6 @@ alias kca='_kca(){ kubectl "$@" --all-namespaces; unset -f _kca; }; _kca'
 alias kcp='kubectl cp'
 alias kdel='kubectl delete'
 alias keti='kubectl exec -ti'
-alias kgrs='kubectl get rs'
 
 alias kpf='kubectl port-forward'
 alias krh='kubectl rollout history'
@@ -114,6 +113,13 @@ alias kdpvc='kubectl describe pvc'
 alias kepvc='kubectl edit pvc'
 alias kgpvc='kubectl get pvc'
 alias kgpvca='kubectl get pvc --all-namespaces'
+
+# replicaset
+alias kdelrs='kubectl delete rs'
+alias kdrs='kubectl describe rs'
+alias kers='kubectl edit rs'
+alias kgrs='kubectl get rs'
+alias kgrsa='kubectl get rs --all-namespaces'
 
 # service (svc)
 alias kdels='kubectl delete svc'
