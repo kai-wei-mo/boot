@@ -82,6 +82,13 @@ alias kei='kubectl edit ingress'
 alias kgi='kubectl get ingress'
 alias kgia='kubectl get ingress --all-namespaces'
 
+# job
+alias kdj='kubectl describe job'
+alias kdelj='kubectl delete job'
+alias kej='kubectl edit job'
+alias kgj='kubectl get job'
+alias kgja='kubectl get job --all-namespaces'
+
 # namespace
 alias kdelns='kubectl delete namespace'
 alias kdns='kubectl describe namespace'
