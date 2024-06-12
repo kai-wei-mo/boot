@@ -26,7 +26,7 @@ alias klf1s='kubectl logs --since 1s -f'
 alias kca='_kca(){ kubectl "$@" --all-namespaces; unset -f _kca; }; _kca'
 alias kcp='kubectl cp'
 alias kdel='kubectl delete'
-alias keti='kubectl exec -ti'
+alias keit='kubectl exec -it'
 
 alias kpf='kubectl port-forward'
 alias krh='kubectl rollout history'
@@ -107,6 +107,13 @@ alias kep='kubectl edit pods'
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
 
+# pv
+alias kdelpv='kubectl delete pv'
+alias kdpv='kubectl describe pv'
+alias kepv='kubectl edit pv'
+alias kgpv='kubectl get pv'
+alias kgpva='kubectl get pv --all-namespaces'
+
 # pvc
 alias kdelpvc='kubectl delete pvc'
 alias kdpvc='kubectl describe pvc'
@@ -121,13 +128,6 @@ alias kers='kubectl edit rs'
 alias kgrs='kubectl get rs'
 alias kgrsa='kubectl get rs --all-namespaces'
 
-# service (svc)
-alias kdels='kubectl delete svc'
-alias kds='kubectl describe svc'
-alias kes='kubectl edit svc'
-alias kgs='kubectl get svc'
-alias kgsa='kubectl get svc --all-namespaces'
-
 # secret
 alias kdelsec='kubectl delete secret'
 alias kdsec='kubectl describe secret'
@@ -136,6 +136,13 @@ alias kgseca='kubectl get secret --all-namespaces'
 kgsecp() {
     kubectl get secret "$1" -o jsonpath="./_secret.txt" -n "${3:-default}" | base64 -d
 }
+
+# service
+alias kdels='kubectl delete svc'
+alias kds='kubectl describe svc'
+alias kes='kubectl edit svc'
+alias kgs='kubectl get svc'
+alias kgsa='kubectl get svc --all-namespaces'
 
 # service account (sa)
 alias kdelsa='kubectl delete sa'
@@ -149,6 +156,13 @@ alias kgss='kubectl get statefulset'
 alias kgssa='kubectl get statefulset --all-namespaces'
 alias krsss='kubectl rollout status statefulset'
 alias ksss='kubectl scale statefulset'
+alias kdelsfs='kubectl delete statefulset'
+alias kdsfs='kubectl describe statefulset'
+alias kesfs='kubectl edit statefulset'
+alias kgsfs='kubectl get statefulset'
+alias kgssfa='kubectl get statefulset --all-namespaces'
+alias krssfs='kubectl rollout status statefulset'
+alias kssfs='kubectl scale statefulset'
 
 # storage class
 alias kdelsc='kubectl delete sc'
