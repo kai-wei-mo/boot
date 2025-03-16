@@ -1,16 +1,26 @@
 #!/bin/bash
 
-read -p "This file will overwrite files in ~/.aliases directory with ones in \
-the same directory as this script. Are you okay with this? (y/N): " \
-confirmation
+# -y flag
+skip_confirmation=false
+while getopts "y" opt; do
+    case $opt in
+        y) skip_confirmation=true ;;
+        *) ;;
+    esac
+done
 
-if [[ $confirmation != [yY] ]]; then
-    echo "Operation aborted."
-    exit 0
+if [ "$skip_confirmation" = false ]; then
+    read -p "This file will overwrite files in ~/.aliases directory with ones in \
+    the same directory as this script. Are you okay with this? (y/N): " \
+    confirmation
+
+    if [[ $confirmation != [yY] ]]; then
+        echo "Operation aborted."
+        exit 0
+    fi
 fi
 
 if [ ! -d ~/.aliases ]; then
-    # create ~/.aliases
     mkdir ~/.aliases
     echo "📁 Created: ~/.aliases"
 else
@@ -18,15 +28,16 @@ else
 fi
 
 if [ -d ~/.aliases ]; then
-    # copy all .sh files in the same directory as this file
-    # whose file name does not begin with underscore
+    # copy all files from the aliases_files directory
     # into the ~/.aliases directory
-    to_be_copied=$(find "$(dirname "$0")" -maxdepth 1 -type f -name '*.sh' ! -name '_*')
+    script_dir=$(dirname "$0")
+    aliases_files_dir="$script_dir/aliases_files"
+    to_be_copied=$(find "$aliases_files_dir" -maxdepth 1 -type f)
     to_be_copied=$(echo "$to_be_copied" | sort)
     for file in $to_be_copied; do
         exists=$(find ~/.aliases -maxdepth 1 -type f -name "$(basename "$file")")
         filename=$(basename "$file")
-        cp "$filename" ~/.aliases
+        cp "$file" ~/.aliases
 
         if [[ $exists ]]; then
             echo "  📎 Copied: $filename (overwritten)"
@@ -35,7 +46,7 @@ if [ -d ~/.aliases ]; then
         fi
     done
 
-    echo "✅ Copied all alias files to ~/.aliases"
+    echo "✅ Copied all files from aliases_files to ~/.aliases"
 fi
 
 shell_files=("$HOME/.zshrc" "$HOME/.bashrc")
