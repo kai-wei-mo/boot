@@ -11,6 +11,4 @@ To use them, aliases may be appended to your shell's configuration file (e.g. `~
 
 ## Scripts
 
-`_aliases_directory.sh` creates the directory `~/.aliases` (if it does not already exist) and copies all alias files in this directory to `~/.aliases`. It also adds `source ~/.aliases` to your shell('s/s) configuration files if it is not already present.
-
-`_append_aliases.sh` appends all alias files to your shell('s/s) configuration files. It is not idempotent.
+`aliases_setup.sh` creates the directory `~/.aliases` (if it doesn't already exist) and overwrites its content with `aliases_files`. It also adds `source ~/.aliases` to the shell configuration files (if it isn't already there).
