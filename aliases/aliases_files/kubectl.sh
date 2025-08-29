@@ -142,11 +142,14 @@ alias kdels='kubectl delete svc'
 alias kds='kubectl describe svc'
 alias kes='kubectl edit svc'
 alias kgs='kubectl get svc'
-alias kgsa='kubectl get svc --all-namespaces'
+alias kgsall='kubectl get svc --all-namespaces'
 
 # service account (sa)
 alias kdelsa='kubectl delete sa'
 alias kdsa='kubectl describe sa'
+alias kesa='kubectl edit sa'
+alias kgsa='kubectl get sa'
+alias kgsaall='kubectl get sa --all-namespaces'
 
 # statefulset
 alias kdelss='kubectl delete statefulset'
