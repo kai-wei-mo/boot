@@ -48,7 +48,13 @@ alias kdelcr='kubectl delete clusterrole'
 alias kecr='kubectl edit clusterrole'
 alias kgcr='kubectl get clusterrole'
 
-# crd
+# clusterrolebinding
+alias kdelcrb='kubectl delete clusterrolebinding'
+alias kdcrb='kubectl describe clusterrolebinding'
+alias kecrb='kubectl edit clusterrolebinding'
+alias kgcrb='kubectl get clusterrolebinding'
+
+# customresourcedefinition
 alias kdcrd='kubectl describe crd'
 alias kdelcrd='kubectl delete crd'
 alias kgcrd='kubectl get crd'
@@ -58,6 +64,11 @@ alias kdcj='kubectl describe cronjob'
 alias kdelcj='kubectl delete cronjob'
 alias kecj='kubectl edit cronjob'
 alias kgcj='kubectl get cronjob'
+
+alias kdelcron='kubectl delete cronjob'
+alias kdcron='kubectl describe cronjob'
+alias kecron='kubectl edit cronjob'
+alias kgcron='kubectl get cronjob'
 
 # daemonset
 alias kdds='kubectl describe daemonset'
@@ -100,6 +111,11 @@ alias kdno='kubectl describe node'
 alias keno='kubectl edit node'
 alias kgno='kubectl get nodes'
 
+alias kdelnode='kubectl delete node'
+alias kdnode='kubectl describe node'
+alias kenode='kubectl edit node'
+alias kgnode='kubectl get nodes'
+
 # pod
 alias kdelp='kubectl delete pods'
 alias kdp='kubectl describe pods'
@@ -107,14 +123,21 @@ alias kep='kubectl edit pods'
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
 
-# pv
+# poddisruptionbudget
+alias kdelpdb='kubectl delete pdb'
+alias kdpdb='kubectl describe pdb'
+alias kepdb='kubectl edit pdb'
+alias kgpdb='kubectl get pdb'
+alias kgpdball='kubectl get pdb --all-namespaces'
+
+# persistentvolume
 alias kdelpv='kubectl delete pv'
 alias kdpv='kubectl describe pv'
 alias kepv='kubectl edit pv'
 alias kgpv='kubectl get pv'
 alias kgpva='kubectl get pv --all-namespaces'
 
-# pvc
+# persistentvolumeclaim
 alias kdelpvc='kubectl delete pvc'
 alias kdpvc='kubectl describe pvc'
 alias kepvc='kubectl edit pvc'
@@ -127,6 +150,19 @@ alias kdrs='kubectl describe rs'
 alias kers='kubectl edit rs'
 alias kgrs='kubectl get rs'
 alias kgrsa='kubectl get rs --all-namespaces'
+
+# role
+alias kdelr='kubectl delete role'
+alias kdr='kubectl describe role'
+alias ker='kubectl edit role'
+alias kgr='kubectl get role'
+alias kgra='kubectl get role --all-namespaces'
+
+alias kdelrole='kubectl delete role'
+alias kdrole='kubectl describe role'
+alias kerole='kubectl edit role'
+alias kgrrole='kubectl get role'
+alias kgrroleall='kubectl get role --all-namespaces'
 
 # secret
 alias kdelsec='kubectl delete secret'
@@ -144,7 +180,7 @@ alias kes='kubectl edit svc'
 alias kgs='kubectl get svc'
 alias kgsall='kubectl get svc --all-namespaces'
 
-# service account (sa)
+# service account
 alias kdelsa='kubectl delete sa'
 alias kdsa='kubectl describe sa'
 alias kesa='kubectl edit sa'
@@ -159,6 +195,7 @@ alias kgss='kubectl get statefulset'
 alias kgssa='kubectl get statefulset --all-namespaces'
 alias krsss='kubectl rollout status statefulset'
 alias ksss='kubectl scale statefulset'
+
 alias kdelsfs='kubectl delete statefulset'
 alias kdsfs='kubectl describe statefulset'
 alias kesfs='kubectl edit statefulset'
