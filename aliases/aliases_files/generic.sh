@@ -22,7 +22,7 @@ alias ..9='cd ../../../../../../../../..'
 alias ..10='cd ../../../../../../../../../..'
 
 alias watch='watch '
-alias watchfast='watch -n 0.2'
+alias watchfast='watch -n 0.2 '
 
 # clear
 alias celar='clear'
