@@ -164,6 +164,13 @@ alias kerole='kubectl edit role'
 alias kgrrole='kubectl get role'
 alias kgrroleall='kubectl get role --all-namespaces'
 
+# sealedsecret
+alias kdelss='kubectl delete sealedsecret'
+alias kdss='kubectl describe sealedsecret'
+alias kess='kubectl edit sealedsecret'
+alias kgss='kubectl get sealedsecret'
+alias kgssa='kubectl get sealedsecret --all-namespaces'
+
 # secret
 alias kdelsec='kubectl delete secret'
 alias kdsec='kubectl describe secret'
@@ -188,14 +195,6 @@ alias kgsa='kubectl get sa'
 alias kgsaall='kubectl get sa --all-namespaces'
 
 # statefulset
-alias kdelss='kubectl delete statefulset'
-alias kdss='kubectl describe statefulset'
-alias kess='kubectl edit statefulset'
-alias kgss='kubectl get statefulset'
-alias kgssa='kubectl get statefulset --all-namespaces'
-alias krsss='kubectl rollout status statefulset'
-alias ksss='kubectl scale statefulset'
-
 alias kdelsfs='kubectl delete statefulset'
 alias kdsfs='kubectl describe statefulset'
 alias kesfs='kubectl edit statefulset'
@@ -208,3 +207,12 @@ alias kssfs='kubectl scale statefulset'
 alias kdelsc='kubectl delete sc'
 alias kdsc='kubectl describe sc'
 alias kgsc='kubectl get sc'
+
+# volume
+alias kdelv='kubectl delete v'
+alias kdv='kubectl describe v'
+alias kev='kubectl edit v'
+alias kgv='kubectl get v'
+alias kgva='kubectl get v --all-namespaces'
+
+alias kdryrun='kustomize build . | kubectl apply --dry-run=server -f -'
