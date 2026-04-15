@@ -39,6 +39,8 @@ alias h='history'
 alias hist='history'
 
 
+alias rmedirs='find . -type d -empty -delete'
+
 # search with ripgrep
 
 # Print files containing a string in file content
