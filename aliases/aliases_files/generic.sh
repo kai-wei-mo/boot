@@ -10,6 +10,10 @@ alias '...'='cd ../..'
 alias '....'='cd ../../..'
 alias '.....'='cd ../../../..'
 alias '......'='cd ../../../../..'
+alias '.......'='cd ../../../../../..'
+alias '........'='cd ../../../../../../..'
+alias '.........'='cd ../../../../../../../..'
+alias '..........'='cd ../../../../../../../../..'
 
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
@@ -33,3 +37,26 @@ alias c='clear'
 # history
 alias h='history'
 alias hist='history'
+
+
+# search with ripgrep
+
+# Print files containing a string in file content
+rgs() {
+  rg -i -l "$1"
+}
+
+# Print files containing a string in contents, show lines around the match
+rgss() {
+  rg -i -n -C 3 "$1"
+}
+
+# Print files whose filename contains a string
+rgf() {
+  rg --files | rg -i "$1"
+}
+
+# Print directories whose name contains a string
+rgd() {
+  find . -type d -iname "*$1*"
+}
