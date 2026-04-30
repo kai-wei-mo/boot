@@ -127,10 +127,10 @@ alias kgia='kubectl get ingress --all-namespaces'
 
 # ingressclass
 alias kdelic='kubectl delete ingressclass'
-alias kdi='kubectl describe ingressclass'
-alias kei='kubectl edit ingressclass'
-alias kgi='kubectl get ingressclass'
-alias kgia='kubectl get ingressclass --all-namespaces'
+alias kdic='kubectl describe ingressclass'
+alias keic='kubectl edit ingressclass'
+alias kgic='kubectl get ingressclass'
+alias kgica='kubectl get ingressclass --all-namespaces'
 
 # job
 alias kdj='kubectl describe job'
